@@ -117,7 +117,7 @@ void MainWindow::stopAllMotors() {
     m_raspbotClient->controlMotor(MotorNumber::R2, MotorDirection::FORWARD, 0);
 
     if (!m_commandTimer->isActive()) {
-        m_commandTimer->start(10); // 10ms 딜레이 후 다음 명령 실행 (적절한 값으로 조절)
+        m_commandTimer->start(10); // 10ms 딜레이 후 다음 명령 실행
         processNextQueuedMotorCommand(); // 첫 번째 명령 즉시 실행
     }
 
